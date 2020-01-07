@@ -16,4 +16,5 @@ RUN apk add --update \
     update-ca-certificates && \
     wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz && \
     tar zxvf google-cloud-sdk.tar.gz -C $HOME && $HOME/google-cloud-sdk/install.sh --usage-reporting=false --path-update=true && \
-    $HOME/google-cloud-sdk/bin/gcloud --quiet components update
+    $HOME/google-cloud-sdk/bin/gcloud --quiet components update && \
+    $HOME/google-cloud-sdk/bin/gcloud components install kubectl
